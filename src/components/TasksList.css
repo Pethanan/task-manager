@@ -1,0 +1,19 @@
+.tasks-list__container {
+  margin-top: 50px;
+  position: relative;
+  width: 60vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 100px;
+}
+.tasks-list {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 2fr);
+}
+
+.tasks-list__container header {
+  padding: 20px 0;
+  background-color: rgb(128, 24, 226);
+  color: white;
+  border-radius: 5px 5px 0 0;
+}

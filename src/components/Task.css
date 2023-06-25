@@ -1,0 +1,30 @@
+.task-item {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 2fr);
+  padding: 20px 0;
+  background-color: rgb(232, 226, 236);
+  border-bottom: 1px solid rgb(146, 129, 158);
+}
+
+.del-task__btn {
+  background-color: rgb(139, 136, 141);
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.del-task__btn:hover {
+  transform: scale(1.1);
+}
+
+.task-item div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.task-name--description p {
+  font-weight: 580;
+}
+.task-name--description i {
+  font-size: 14px;
+}

@@ -1,0 +1,67 @@
+.task-form-container {
+  background-color: rgb(215, 204, 224);
+  border-radius: 5px;
+  position: relative;
+  width: 60vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.task-form {
+  margin-top: 20px;
+}
+.task-form__label {
+  margin: 0 10px 0 0;
+  font-weight: 500;
+}
+
+.task-form__controls {
+  padding: 5px;
+  margin: 0 10px 0 0;
+}
+.task-form__controls:focus {
+  background-color: rgba(188, 145, 228, 0.603);
+}
+
+.task-form button {
+  padding: 7px 10px;
+  color: white;
+  background-color: rgb(128, 24, 226);
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px 0 0;
+  font-weight: 400;
+}
+
+.task-form button:hover {
+  color: white;
+  overflow: hidden;
+  transform: scale(1.1);
+  box-shadow: 2px 3px rgba(186, 183, 189, 0.589);
+}
+
+.task-form__btn-container {
+  margin-top: 20px;
+}
+
+.add-task-enable-btn {
+  padding: 8px;
+  background-color: rgb(128, 24, 226);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.add-task-enable-btn:hover {
+  background-color: rgb(113, 81, 143);
+  color: rgb(3, 3, 3);
+}
+
+.task-form button.add-task__cancel-btn {
+  background-color: rgb(160, 160, 160);
+  color: black;
+}
