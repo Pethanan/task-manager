@@ -9,10 +9,7 @@ const TasksCtxProvider = (props) => {
   };
 
   const deleteTaskHandler = (taskId) => {
-    console.log(tasksList);
     const currentTasksList = tasksList.filter((task) => task.id !== taskId);
-    console.log(currentTasksList);
-
     const upatedTasksList = [...currentTasksList];
     setTasksList(upatedTasksList);
   };

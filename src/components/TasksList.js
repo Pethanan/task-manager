@@ -5,7 +5,6 @@ import "./TasksList.css";
 
 const TasksList = () => {
   const tasksContext = useContext(tasksCtx);
-  console.log(tasksContext.tasksList);
   const tasksList = tasksContext.tasksList.map((task) => (
     <Task key={task.id} task={task}></Task>
   ));

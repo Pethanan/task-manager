@@ -3,6 +3,8 @@ import "./Task.css";
 import tasksCtx from "../store/tasks-ctx";
 
 const Task = ({ task }) => {
+  //to convert getMonth to string
+
   const months = [
     "Jan",
     "Feb",
@@ -17,6 +19,7 @@ const Task = ({ task }) => {
     "Nov",
     "Dec",
   ];
+
   const dueDate = new Date(task.dueDate);
   const dueDateMonth = months[dueDate.getMonth()];
   const dueDateYear = dueDate.getFullYear();
@@ -29,11 +32,10 @@ const Task = ({ task }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const taskDeleteHandler = () => {
-    console.log(task.id);
     tasksContext.deleteTask(task.id);
   };
 
-  const checkBoxToggler = () => {
+  const checkBoxChangeToggler = () => {
     setIsChecked((prev) => !prev);
     tasksContext.editTask(task.id, !isChecked ? "Completed" : "Pending");
   };
@@ -41,7 +43,7 @@ const Task = ({ task }) => {
   return (
     <li className="task-item">
       <span>
-        <input type="checkbox" onClick={checkBoxToggler} />
+        <input type="checkbox" onClick={checkBoxChangeToggler} />
       </span>
       <div className="task-name--description">
         <p>{task.name}</p>

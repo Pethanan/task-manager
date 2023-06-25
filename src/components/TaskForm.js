@@ -14,7 +14,7 @@ const TaskForm = () => {
     status: "pending",
   });
 
-  const addTaskToggler = () => {
+  const addTaskEnableToggler = () => {
     setAddTaskEnable((prev) => !prev);
   };
 
@@ -26,14 +26,13 @@ const TaskForm = () => {
     e.preventDefault();
     const id = Math.floor(Math.random() * 100);
     const task = { ...taskFormInputs, id };
-    console.log(task);
     tasksContext.addTask(task);
   };
 
   return (
     <div className="task-form-container">
       <div className="add-task-form__enable-btn-container">
-        <button className="add-task-enable-btn" onClick={addTaskToggler}>
+        <button className="add-task-enable-btn" onClick={addTaskEnableToggler}>
           Add a Task
         </button>
       </div>
@@ -49,6 +48,7 @@ const TaskForm = () => {
             name="name"
             value={taskFormInputs.name}
             onChange={taskFormInputChangeHandler}
+            required
           />
           <label htmlFor="description" className="task-form__label">
             Description
@@ -60,6 +60,7 @@ const TaskForm = () => {
             className="task-form__controls"
             value={taskFormInputs.description}
             onChange={taskFormInputChangeHandler}
+            required
           />
           <label htmlFor="dueDate" className="task-form__label">
             Due Date
@@ -70,10 +71,14 @@ const TaskForm = () => {
             className="task-form__controls"
             value={taskFormInputs.dueDate}
             onChange={taskFormInputChangeHandler}
+            required
           />
           <div className="task-form__btn-container">
             <button type="submit">Add Task</button>
-            <button className="add-task__cancel-btn" onClick={addTaskToggler}>
+            <button
+              className="add-task__cancel-btn"
+              onClick={addTaskEnableToggler}
+            >
               Cancel
             </button>
           </div>
