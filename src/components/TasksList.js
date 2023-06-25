@@ -5,7 +5,8 @@ import "./TasksList.css";
 
 const TasksList = () => {
   const tasksContext = useContext(tasksCtx);
-  const tasksList = tasksContext.tasksList.map((task) => (
+  const tasksListItems = tasksContext.tasksList;
+  const tasksList = tasksListItems.map((task) => (
     <Task key={task.id} task={task}></Task>
   ));
 
@@ -18,8 +19,8 @@ const TasksList = () => {
         <p>Status</p>
         <p>Delete</p>
       </header>
-      {tasksList && tasksList}
-      {tasksList.length === 0 && (
+      {tasksList}
+      {tasksListItems.length === 0 && (
         <p style={{ paddingTop: "10px" }}>
           No task Added. Add some task to the list
         </p>
