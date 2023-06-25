@@ -25,7 +25,7 @@ const Task = ({ task }) => {
   const dueDateYear = dueDate.getFullYear();
   const dueDateDate = dueDate.getDate();
 
-  const dueDateStr = `${dueDateDate} ${dueDateMonth} ${dueDateYear}`;
+  const dueDateStr = `${dueDateDate}-${dueDateMonth}-${dueDateYear}`;
 
   const tasksContext = useContext(tasksCtx);
 

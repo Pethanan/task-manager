@@ -12,6 +12,7 @@
 }
 
 .tasks-list__container header {
+  font-size: 17px;
   padding: 20px 0;
   background-color: rgb(128, 24, 226);
   color: white;

@@ -6,11 +6,13 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 10px 0;
-  padding: 20px;
+  padding: 35px;
 }
 
 .task-form {
   margin-top: 20px;
+  padding: 20px;
+  padding-bottom: 0;
 }
 .task-form__label {
   margin: 0 10px 0 0;
@@ -22,7 +24,7 @@
   margin: 0 10px 0 0;
 }
 .task-form__controls:focus {
-  background-color: rgba(188, 145, 228, 0.603);
+  background-color: rgba(221, 207, 233, 0.603);
 }
 
 .task-form button {
@@ -47,6 +49,7 @@
 }
 
 .add-task-enable-btn {
+  font-size: 18px;
   padding: 8px;
   background-color: rgb(128, 24, 226);
   color: white;
