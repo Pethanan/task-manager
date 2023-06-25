@@ -22,7 +22,7 @@ const TasksList = () => {
       {tasksList}
       {tasksListItems.length === 0 && (
         <p style={{ paddingTop: "10px" }}>
-          No task Added. Add some task to the list
+          Task List is Empty. Add some task to the list
         </p>
       )}
     </div>

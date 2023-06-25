@@ -3,25 +3,10 @@ import "./Task.css";
 import tasksCtx from "../store/tasks-ctx";
 
 const Task = ({ task }) => {
-  //to convert getMonth to string
-
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
   const dueDate = new Date(task.dueDate);
-  const dueDateMonth = months[dueDate.getMonth()];
+  const dueDateMonth = dueDate.toLocaleString("default", {
+    month: "short",
+  });
   const dueDateYear = dueDate.getFullYear();
   const dueDateDate = dueDate.getDate();
 
