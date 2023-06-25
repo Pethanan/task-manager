@@ -27,6 +27,12 @@ const TaskForm = () => {
     const id = Math.floor(Math.random() * 100);
     const task = { ...taskFormInputs, id };
     tasksContext.addTask(task);
+    setTaskFormInputs({
+      name: "",
+      description: "",
+      dueDate: new Date(),
+      status: "pending",
+    });
   };
 
   return (
